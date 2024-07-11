@@ -1,0 +1,36 @@
+*****************************************COMMAND PROMPT*****************************************************************
+
+netstat -ano | findstr :8082
+
+taskkill /PID <PID> /F
+
+
+************************************************************************************************************************
+
+
+USE PROJECT;
+
+SELECT * FROM honeyword_user_data;
+SELECT * FROM honeywords;
+SELECT * FROM password_reset_tokens;
+
+DELETE FROM honeyword_user_data WHERE ID =5;
+DELETE FROM honeywords WHERE user_id = 5;
+
+ALTER TABLE honeyword_user_data AUTO_INCREMENT = 4;
+ALTER TABLE honeywords AUTO_INCREMENT = 51;
+
+INSERT INTO honeywords (Sno, honeyword, user_id) VALUES (26, '$2a$10$Z.3mzgVBJ8LYqnDgjW3jnu05yC93B.h5YCQcPc7RbvPqWu0hAjyPC', 3);
+UPDATE honeywords SET Sno = Sno + 1 WHERE Sno >= 25;
+
+
+
+
+
+
+
+
+
+
+
+
